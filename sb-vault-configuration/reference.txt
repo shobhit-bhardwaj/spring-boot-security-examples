@@ -1,0 +1,27 @@
+vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+
+export VAULT_ADDR=http://127.0.0.1:8200
+
+
+vault kv put secret/application app.banner='Welcome to Application'
+vault kv get secret/application
+
+vault kv put secret/application/dev app.banner='Welcome to Dev Application'
+vault kv get secret/application/dev
+
+
+vault kv put secret/sb-vault-configuration parameters.username=shobhit parameters.password=Shobhit@123 app.username=appName app.password=appPassword
+vault kv get secret/sb-vault-configuration
+
+vault kv put secret/sb-vault-configuration/dev parameters.username=shobhitDev parameters.password=ShobhitDev@123 app.username=appNameDev app.password=appPasswordDev
+vault kv get secret/sb-vault-configuration/dev
+
+vault kv put secret/sb-vault-configuration/prod parameters.username=shobhitProd parameters.password=ShobhitProd@123 app.username=appNameProd app.password=appPasswordProd
+vault kv get secret/sb-vault-configuration/prod
+
+
+vault kv delete secret/application
+vault kv delete secret/application/dev
+vault kv delete secret/sb-vault-configuration
+vault kv delete secret/sb-vault-configuration/dev
+vault kv delete secret/sb-vault-configuration/prod

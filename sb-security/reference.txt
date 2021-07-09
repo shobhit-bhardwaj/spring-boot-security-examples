@@ -1,0 +1,4 @@
+http://localhost:8080/SBSecurity/user
+http://localhost:8080/SBSecurity/admin
+
+http://localhost:8080/SBSecurity/logout

@@ -1,0 +1,17 @@
+http://localhost:8080/SBSecurity/admin/addUser
+{
+    "username": "shobhit",
+    "password": "shobhit",
+    "roles": [
+            {
+                "roleName":"ADMIN"
+            }
+        ]
+}
+
+
+http://localhost:8080/SBSecurity/admin/message/shobhit
+
+http://localhost:8080/SBSecurity/user/message/shobhit
+
+http://localhost:8080/SBSecurity/rest/message/shobhit
